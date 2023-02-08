@@ -3,6 +3,7 @@ import 'package:flutterbasic/page/home_page.dart';
 import 'package:flutterbasic/route/navigate.dart';
 import 'package:flutterbasic/view_model/pokemon_view_model.dart';
 import 'package:flutterbasic/view_model/user_view_model.dart';
+
 import 'package:provider/provider.dart';
 
 void main() {

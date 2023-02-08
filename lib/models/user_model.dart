@@ -1,39 +1,33 @@
-// To parse this JSON data, do
-//
-//     final user = userFromJson(jsonString);
-
 import 'dart:convert';
 
-List<User> userFromJson(String str) => List<User>.from(json.decode(str).map((x) => User.fromJson(x)));
+  List<UserModel> userModelFromJson(String str) => List<UserModel>.from(json.decode(str).map((x) => UserModel.fromJson(x)));
 
-String userToJson(List<User> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+  String userModelToJson(List<UserModel> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
-class User {
-    User({
-        required this.firstName,
-        required this.lastName,
+class UserModel {
+    UserModel({
+        required this.firstname,
+        required this.lastname,
         required this.message,
         required this.id,
     });
 
-    String firstName;
-    String lastName;
-    String message;
-    String id;
+    final String firstname;
+    final String lastname;
+    final String message;
+    final String id;
 
-    factory User.fromJson(Map<String, dynamic> json) => User(
-        firstName: json["first_name"],
-        lastName: json["last_name"],
+    factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
+        firstname: json["firstname"],
+        lastname: json["lastname"],
         message: json["message"],
         id: json["id"],
     );
 
     Map<String, dynamic> toJson() => {
-        "first_name": firstName,
-        "last_name": lastName,
+        "firstname": firstname,
+        "lastname": lastname,
         "message": message,
         "id": id,
     };
-
-    
 }

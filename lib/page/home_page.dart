@@ -33,8 +33,8 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, "/GridPokemon");
               }, child: Text("GridPokemon")),
               ElevatedButton(onPressed: () {
-                Navigator.pushNamed(context, "/ApiFuction");
-              }, child: Text("ApiFuction")),
+                Navigator.pushNamed(context, "/UserList");
+              }, child: Text("UserList")),
             ],
           ),
         ),

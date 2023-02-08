@@ -16,10 +16,17 @@ class _GridPokemonState extends State<GridPokemon> {
     PokemonViewModel pokemonViewModel = context.watch<PokemonViewModel>();
     return Scaffold(
       appBar: AppBar(
-        title: Text('GridList'),
+        title: const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Text('GridList'),
+        ),
+        actions: [Padding(
+          padding: const EdgeInsets.only(right: 10),
+          child: IconButton(onPressed: () {}, icon: const Icon(Icons.menu, color: Colors.black,),),
+        )],
       ),
       body: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           childAspectRatio: 1.4,
         ),
@@ -39,31 +46,17 @@ class _GridPokemonState extends State<GridPokemon> {
                     top: 20,
                     left: 20,
                     child: 
-                      Text(pokemonModel.name, 
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white
-                        ),
+                      Text(pokemonModel.name, style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.white),
                       ),
                   ),
                   Positioned(
                     top: 45,
                     left: 20,
                     child: 
-                      Text(
-                        pokemonModel.type.toString(),
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                          color: Colors.white
-                        ),
+                      Text(pokemonModel.type.toString(),style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14,color: Colors.white),
                       ),
                   ),
-                  Positioned(
-                    bottom: 5,
-                    right: 5,
-                    child: Image.network(pokemonModel.img,height: 100, width: 100, fit: BoxFit.cover),)
+                  Positioned(bottom: 5,right: 5,child: Image.network(pokemonModel.img,height: 100, width: 100, fit: BoxFit.cover),)
                 ],
               ),
             ),

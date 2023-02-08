@@ -1,0 +1,33 @@
+{
+    "Product": [
+    {
+        "id" : 1,
+        "title" : "AMD Ryzen 5 5600X",
+        "description" : "6 Core 12 Threads Base Clock 3.7 GHz",
+        "image" : "https://notebookspec.com/storage/pc-cpu/cpu_409_20201009-104937_1.png",
+        "price" : "6,120"
+    },
+    {
+        "id" : 2,
+        "title" : "AMD Ryzen 7 7600X",
+        "description" : "6 Core 12 Threads Base Clock 4.7 GHz",
+        "image" : "https://notebookspec.com/storage/pc-cpu/480-1.png",
+        "price" : "11,165"
+    },
+    {
+        "id" : 3,
+        "title" : "INTEL Core i5-12400",
+        "description" : "6 Core 12 Threads Base Clock 2.5 GHz",
+        "image" : "https://notebookspec.com/storage/pc-cpu/cpu_447_20220124-132335_1.png",
+        "price" : "7,560"
+    },
+    {
+        "id" : 4,
+        "title" : "INTEL Core i5-13400",
+        "description" : "10 Core 16 Threads Base Clock 2.5 GHz",
+        "image" : "https://notebookspec.com/storage/pc-cpu/487-1.png",
+        "price" : "6,120"
+    }
+
+    ]
+}

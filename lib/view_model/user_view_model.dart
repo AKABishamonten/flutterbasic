@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutterbasic/models/user_model.dart';
-import 'package:flutterbasic/service/respository.dart';
+import 'package:flutterbasic/service/user_service.dart';
 import 'package:flutterbasic/view_model/api_status.dart';
 
 class UserViewModel extends ChangeNotifier{
-  List<User> _user = [];
+  List<UserModel> _userModel = [];
 
-  List<User> get user => _user;
+  List<UserModel> get userModel => _userModel;
 
-  setUserModel(List<User> user){
-    _user = user;
+  setUserModel(List<UserModel> userModel){
+    _userModel = userModel;
     notifyListeners();
   }
 
@@ -20,13 +20,11 @@ class UserViewModel extends ChangeNotifier{
   getUserList() async {
     final response = await UserService.getUserList();
     if(response is Success){
-      setUserModel(response.response as List<User>);
+      setUserModel(response.response as List<UserModel>);
+      notifyListeners();
     }else{
       print("Failure Response");
     }
   }
 
-  deleteUser() async {
-
-  }
 }
